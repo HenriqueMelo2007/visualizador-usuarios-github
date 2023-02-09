@@ -1,0 +1,21 @@
+.container {
+  margin-top: 30px;
+  padding: 20px 0 0 20px;
+  background-color: rgb(80, 149, 209);
+  border-radius: 30px;
+  color: rgb(18, 18, 18);
+  height: 300px;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+}
+
+.image {
+  max-width: 80px;
+  max-height: 80px;
+  margin-right: 10px;
+  clip-path: circle(50% at 50% 50%);
+  object-fit: cover;
+}
