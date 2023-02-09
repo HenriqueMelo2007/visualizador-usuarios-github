@@ -1,20 +1,20 @@
 import style from './card.module.css'
 
-export function Card () {
+export function Card (props) {
   return (
 
     <div className={style.container}>
       <header className={style.header}>
-        <img className={style.image} src="https://avatars.githubusercontent.com/u/86623792?v=4" alt="" />
-        <h3>HenriqueMelo2007</h3>
+        <img className={style.image} src={props.imagem} alt="" />
+        <h3>{props.login}</h3>
       </header>
 
-      <main>
-        <h4>repositorios</h4>
-        <h4>nome</h4>
-        <h4>local</h4>
-        <h4>seguidores</h4>
-        <h4>created at</h4>
+      <main className={style.main}>
+        <h4>Repositórios: {props.repos}</h4>
+        <h4>Nome: {props.nome}</h4>
+        <h4>Local: {props.local}</h4>
+        <h4>Seguidores: {props.seguidores}</h4>
+        <h4>Criado em: {props.criado}</h4>       
       </main>
     </div>
   )

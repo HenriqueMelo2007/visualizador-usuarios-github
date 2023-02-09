@@ -25,6 +25,12 @@ h1 {
   margin-bottom: 20px;
 }
 
+.divHeader {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 input {
   width: 50%;
   height: 30px;
@@ -32,4 +38,17 @@ input {
   border: none;
   border-radius: 3px;
   margin-top: 20px;
+}
+
+button {
+  background-color: rgb(80, 149, 209);
+  color: rgb(18, 18, 18);
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+  margin-top: 20px;
+}
+
+button:hover {
+  cursor: pointer;
 }

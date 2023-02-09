@@ -19,3 +19,12 @@
   clip-path: circle(50% at 50% 50%);
   object-fit: cover;
 }
+
+.main {
+  margin-left: 30px;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
