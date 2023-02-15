@@ -28,3 +28,7 @@
   flex-direction: column;
   gap: 3px;
 }
+
+.span {
+  color: rgb(172, 46, 46);
+}

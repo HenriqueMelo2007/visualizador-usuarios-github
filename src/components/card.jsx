@@ -10,11 +10,11 @@ export function Card (props) {
       </header>
 
       <main className={style.main}>
-        <h4>Repositórios: {props.repos}</h4>
-        <h4>Nome: {props.nome}</h4>
-        <h4>Local: {props.local}</h4>
-        <h4>Seguidores: {props.seguidores}</h4>
-        <h4>Criado em: {props.criado}</h4>       
+        <h4>Repositórios: <span className={style.span}>{props.repos}</span></h4>
+        <h4>Nome: <span className={style.span}>{props.nome}</span></h4>
+        <h4>Local: <span className={style.span}>{props.local}</span></h4>
+        <h4>Seguidores: <span className={style.span}>{props.seguidores}</span></h4>
+        <h4>Criado em: <span className={style.span}>{props.criado}</span></h4>       
       </main>
     </div>
   )
