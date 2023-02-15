@@ -22,10 +22,6 @@ export function App() {
     buscandoNaApi()
   }, [userGitHub])
 
-  useEffect(() => {
-    console.log(infoUserGitHub.local)
-  }, [infoUserGitHub])
-
 
   return (
     <div>
@@ -37,15 +33,12 @@ export function App() {
           <button type='button' onClick={add}>Pesquisar</button>
         </div>
 
-        
       </header>
 
       {
         <Card imagem={infoUserGitHub.imagem} login={infoUserGitHub.login} repos={infoUserGitHub.repos} nome={infoUserGitHub.nome} local={infoUserGitHub.local} seguidores={infoUserGitHub.seguidores} criado={infoUserGitHub.criado} id={infoUserGitHub.id} seguindo={infoUserGitHub.seguindo} atualizado={infoUserGitHub.atualizado} />
       }
 
-
     </div>
-
   )
 }
