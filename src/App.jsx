@@ -4,7 +4,7 @@ import {Card} from './components/card'
 export function App() {
   const [loginInput, setLoginInput] = useState('')
   const [userGitHub, setUserGitHub] = useState('')
-  const [infoUserGitHub, setInfoUserGitHub] = useState({imagem: '', login: '', repos: '', nome: '', local: '', seguidores: '', criado: ''})
+  const [infoUserGitHub, setInfoUserGitHub] = useState({imagem: '', login: '', repos: '', nome: '', local: '', seguidores: '', criado: '', id: '', seguindo: ''})
 
   function add() {
     setUserGitHub(loginInput)
@@ -14,7 +14,7 @@ export function App() {
     async function buscandoNaApi () {
       const urlAPI = `https://api.github.com/users/${userGitHub}`
       const jsonAPI = await fetch(urlAPI).then(u => u.json()).then(data => {
-        setInfoUserGitHub({imagem: data.avatar_url, login: data.login, repos: data.public_repos, nome: data.name, local: data.location, seguidores: data.followers, criado: data.created_at})
+        setInfoUserGitHub({imagem: data.avatar_url, login: data.login, repos: data.public_repos, nome: data.name, local: data.location, seguidores: data.followers, criado: data.created_at, id: data.id, seguindo: data.following})
       })
 
     }
@@ -41,7 +41,7 @@ export function App() {
       </header>
 
       {
-        <Card imagem={infoUserGitHub.imagem} login={infoUserGitHub.login} repos={infoUserGitHub.repos} nome={infoUserGitHub.nome} local={infoUserGitHub.local} seguidores={infoUserGitHub.seguidores} criado={infoUserGitHub.criado} />
+        <Card imagem={infoUserGitHub.imagem} login={infoUserGitHub.login} repos={infoUserGitHub.repos} nome={infoUserGitHub.nome} local={infoUserGitHub.local} seguidores={infoUserGitHub.seguidores} criado={infoUserGitHub.criado} id={infoUserGitHub.id} seguindo={infoUserGitHub.seguindo} />
       }
 
 
