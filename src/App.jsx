@@ -4,7 +4,7 @@ import {Card} from './components/card'
 export function App() {
   const [loginInput, setLoginInput] = useState('')
   const [userGitHub, setUserGitHub] = useState('')
-  const [infoUserGitHub, setInfoUserGitHub] = useState({})
+  const [infoUserGitHub, setInfoUserGitHub] = useState()
 
   function add() {
     setUserGitHub(loginInput)
@@ -17,22 +17,15 @@ export function App() {
 
       console.log(jsonAPI)
 
-      setInfoUserGitHub({
-        imagem: jsonAPI.avatar_url,
-        login: jsonAPI.login,
-        repos: jsonAPI.public_repos,
-        nome: jsonAPI.name,
-        local: jsonAPI.location,
-        seguidores: jsonAPI.followers,
-        criado: jsonAPI.created_at,
-      })
-
-      console.log(infoUserGitHub)
-
+      setInfoUserGitHub(await jsonAPI)
     }
 
     buscandoNaApi()
   }, [userGitHub])
+
+  useEffect(() => {
+    console.log(infoUserGitHub)
+  }, [infoUserGitHub])
 
 
   return (
