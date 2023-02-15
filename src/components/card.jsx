@@ -16,7 +16,8 @@ export function Card (props) {
         <h4>Local: <span className={style.span}>{props.local}</span></h4>
         <h4>Seguidores: <span className={style.span}>{props.seguidores}</span></h4>
         <h4>Seguindo: <span className={style.span}>{props.seguindo}</span></h4>
-        <h4>Criado em: <span className={style.span}>{props.criado}</span></h4>       
+        <h4>Criado em: <span className={style.span}>{props.criado}</span></h4>
+        <h4>Atualizado pela última vez em: <span className={style.span}>{props.atualizado}</span></h4>        
       </main>
     </div>
   )
