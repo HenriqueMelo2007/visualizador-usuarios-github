@@ -1,6 +1,11 @@
 import style from './card.module.css'
 
 export function Card (props) {
+
+  if (!props.id) {
+    return
+  }
+
   return (
 
     <div className={style.container}>
