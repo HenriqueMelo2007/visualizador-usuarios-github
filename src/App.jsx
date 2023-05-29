@@ -35,10 +35,8 @@ export function App() {
 
       </header>
 
-      {
-        <Card imagem={infoUserGitHub.imagem} login={infoUserGitHub.login} repos={infoUserGitHub.repos} nome={infoUserGitHub.nome} local={infoUserGitHub.local} seguidores={infoUserGitHub.seguidores} criado={infoUserGitHub.criado} id={infoUserGitHub.id} seguindo={infoUserGitHub.seguindo} atualizado={infoUserGitHub.atualizado} />
-      }
-
+      <Card imagem={infoUserGitHub.imagem} login={infoUserGitHub.login} repos={infoUserGitHub.repos} nome={infoUserGitHub.nome} local={infoUserGitHub.local} seguidores={infoUserGitHub.seguidores} criado={infoUserGitHub.criado} id={infoUserGitHub.id} seguindo={infoUserGitHub.seguindo} atualizado={infoUserGitHub.atualizado} />
+      
     </div>
   )
 }
