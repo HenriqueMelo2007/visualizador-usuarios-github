@@ -7,6 +7,9 @@ Aplicação Feita em React que possibilita utilizar login de qualquer usuário d
 ## Layout
 
 ![preview](src/assets/preview.png)
+
+#
+
 ![preview](src/assets/preview-2.png)
 
 ## 🛠 Tecnologias:
